@@ -10,10 +10,12 @@
         {
             'id': 1,
             'title': 'Monthly',
+            'link': '#tab-1'
         },
         {
             'id': 2,
             'title': 'Yearly',
+            'link': '#tab-2'
         }
     ]
 
@@ -117,11 +119,8 @@
             </div>
             <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
-                    <li class="nav-item">
-                        <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">{{ navTitle[0].title }}</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="pill" href="#tab-2">{{ navTitle[1].title }}</button>
+                    <li class="nav-item" v-for="navItem in navTitle" :key="navItem.id">
+                        <button class="nav-link" data-bs-toggle="pill" :href="navItem.link">{{ navItem.title }}</button>
                     </li>
                 </ul>
                 <div class="tab-content text-start">
