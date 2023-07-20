@@ -4,7 +4,7 @@
         'subTitle': 'Choose Your Plan',
     }
 
-    const {title, subTitle, content, image} = download
+    const {title, subTitle} = download
 
     const navTitle = [
         {
